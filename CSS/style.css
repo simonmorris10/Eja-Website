@@ -1,0 +1,433 @@
+  /* Basic styles for layout and appearance */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  #open, #close{
+    display: none;
+  }
+  label{
+      color: white;
+      /* text-align: left; */
+  }
+
+  nav {
+    background-color: #004477;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  section {
+    padding: 20px;
+    text-align: center;
+  }
+  footer {
+    background-color: #004477;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+  /* Add this CSS to adjust the sections */
+.home,
+.contact,
+.signin,
+.login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.home .content {
+  max-width: 800px;
+}
+
+.home h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.btn, button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #005baa;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.btn, button:hover {
+  background-color: #004477;
+}
+#about{
+height: 100vh;
+width: 97%;
+background: #ddd;
+}
+#about {
+text-align: center;
+}
+
+#about {
+text-align: center;
+}
+
+.content {
+display: flex;
+flex-direction: row; /* Aligns children in a row */
+justify-content: center; /* Centers children horizontally */
+align-items: center; /* Centers children vertically */
+}
+
+.text,
+.img-sec {
+flex: 1; /* Each child takes equal space */
+}
+
+.text {
+text-align: left; /* Align text to the left */
+padding-right: 20px; /* Space between text and image */
+}
+
+.img-sec img {
+width: 100%; /* Image fills its container */
+max-width: 499px; /* Limit image width */
+height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+#contact {
+text-align: center;
+color: black;
+height: 100vh;
+}
+
+.contact-info {
+display: flex;
+justify-content: space-around;
+margin-bottom: 40px;
+}
+
+.contact-item {
+flex: 1;
+margin: 0 10px;
+}
+
+.contact-item h3 {
+font-size: 1.2rem;
+margin-bottom: 10px;
+}
+
+form {
+max-width: 600px;
+margin: 0 auto;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+label {
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+textarea {
+resize: vertical;
+}
+
+button.btn {
+background-color: #007bff;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+background-color: #0056b3;
+}
+#gallery {
+text-align: center;
+height: 100%;
+}
+
+.gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.gallery-item {
+margin: 10px;
+}
+
+.gallery-item img {
+max-width: 100%;
+height: auto;
+width: 250px; /* Adjust as needed */
+height: 250px; /* Set the same height for all images */
+object-fit: cover; /* Ensure images maintain aspect ratio */
+}
+.gallery-item {
+position: relative; /* Ensure the overlay stays within the image */
+margin: 10px;
+overflow: hidden; /* Ensure the overlay stays within the image */
+}
+
+.gallery-item img {
+max-width: 100%;
+height: auto;
+width: 250px; /* Adjust as needed */
+height: 250px; /* Set the same height for all images */
+object-fit: cover; /* Ensure images maintain aspect ratio */
+transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.gallery-item:hover img {
+transform: scale(1.1); /* Zoom in slightly on hover */
+}
+
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+opacity: 0;
+transition: opacity 0.3s ease; /* Add transition effect */
+}
+
+.gallery-item:hover .overlay {
+opacity: 1; /* Show overlay on hover */
+}
+
+.overlay-content {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+text-align: center;
+opacity: 0; /* Initially hidden */
+transition: opacity 0.3s ease; /* Add transition effect */
+}
+
+.gallery-item:hover .overlay-content {
+opacity: 1; /* Show content on hover */
+}
+
+/* Footer styles */
+footer {
+background-color: #004477;
+color: #fff;
+padding: 30px 0;
+}
+
+.footer-content {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: flex-start;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.footer-logo {
+flex: 1;
+max-width: 200px;
+}
+
+.footer-logo img {
+width: 100%;
+height: auto;
+margin-bottom: 10px;
+}
+
+.footer-links {
+flex: 1;
+}
+
+.footer-links ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-links ul li {
+margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+color: #fff;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+color: #ccc;
+}
+
+.footer-contact {
+flex: 1;
+}
+
+.footer-contact h4 {
+margin-bottom: 10px;
+}
+
+.footer-contact p {
+margin-bottom: 5px;
+}
+
+.footer-social {
+flex: 1;
+}
+
+.footer-social h4 {
+margin-bottom: 10px;
+}
+
+.footer-social ul {
+list-style: none;
+padding: 0;
+display: flex;
+justify-content: center;
+}
+
+.footer-social ul li {
+margin: 0 5px;
+}
+
+.footer-social ul li a {
+display: block;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background-color: #005baa;
+transition: background-color 0.3s ease;
+}
+
+.footer-social ul li a:hover {
+background-color: #004477;
+}
+
+.footer-bottom {
+background-color: #222;
+padding: 10px 0;
+text-align: center;
+}
+
+.footer-bottom p {
+margin: 0;
+}
+.footer-social ul li a img {
+width: 30px; /* Adjust size as needed */
+height: 30px; /* Adjust size as needed */
+opacity: 0.7; /* Set opacity for transparency */
+transition: opacity 0.3s ease; /* Add transition effect */
+}
+
+.footer-social ul li a:hover img {
+opacity: 1; /* Increase opacity on hover */
+}
+
+/* Center the button and position social media handles below it */
+.article {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.article .btn {
+margin-top: 20px;
+}
+
+.social-handles {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+
+.social-handles img {
+width: 30px; /* Adjust size as needed */
+height: 30px; /* Adjust size as needed */
+margin: 0 10px; /* Adjust spacing between icons */
+}
+
+/* Adding media qeury for responsivness */
+@media screen and (max-width: 700px){
+  nav {
+    background-color: #004477;
+    padding: 130px;
+    margin: 30px;
+    text-align: block;
+    height: 100%;
+    width: auto;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 30px;
+    line-height: 120px;
+  }
+  /* nav a:hover {
+    background: #ad1d24;
+    padding: 30px;
+    border-radius: 20px;
+  } */
+  #open, #close{
+    font-size: 150px;
+    display: block;
+  }
+  #open{
+    display: none;
+  }
+}
